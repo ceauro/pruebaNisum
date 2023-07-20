@@ -1,0 +1,2 @@
+insert into configuration values (1, 'regexp.password','^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$');
+insert into person values ('a8159b7c-f1ad-43a0-98cc-2960369e2f56', CURRENT_TIMESTAMP(), 'admin@admin.com', TRUE, CURRENT_TIMESTAMP(), NULL, 'ADMIN', '$2a$10$VKaqzvTcgIgSh1PupMtkM.vvkiJw7y5s9xgMmTor35hw/1Sb0hrqW', NULL);
