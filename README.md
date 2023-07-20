@@ -6,7 +6,7 @@ El repositorio contiene la solución a la prueba técnica enviada para el puesto
 
 - [Inicio](#Inicio)
     - [Por Consola](#Por-Consola)
-    - [Installation](#Desde-un-IDE)
+    - [Desde un IDE](#Desde-un-IDE)
 - [Componentes](#Componentes)
 - [Endpoints](#Endpoints)
     - [Login](#Login)
