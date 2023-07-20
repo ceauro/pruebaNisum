@@ -15,6 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.Objects;
 
 @Service
 @AllArgsConstructor
@@ -31,10 +32,7 @@ public class UserService {
         }
 
         User userEntity = userRepository.save(getUserEntity(user));
-
-        if(!userEntity.getPhones().isEmpty()){
-            phoneService.savePhones(userEntity, userEntity.getPhones());
-        }
+        phoneService.savePhones(userEntity, userEntity.getPhones());
 
         return getUserResponse(userEntity);
     }
