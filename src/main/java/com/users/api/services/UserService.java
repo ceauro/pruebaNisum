@@ -13,6 +13,7 @@ import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 import java.util.Objects;
@@ -26,6 +27,7 @@ public class UserService {
     private final ModelMapper modelMapper;
     private final PasswordEncoder passwordEncoder;
 
+    @Transactional
     public GeneralResponse createUser(UserRequest user) throws DuplicatedDataException {
         if(userExists(user.getEmail())){
             throw new DuplicatedDataException(Ctes.Services.EXISTS_EMAIL_ERROR);
